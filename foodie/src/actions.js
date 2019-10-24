@@ -32,136 +32,136 @@ export const MEAL_ID = 'MEAL_ID'
 
 
 
-export function createUser(username, password) {
-  return (dispatch) => {
-    dispatch({type: CREATE_USER_START})
+// export function createUser(username, password) {
+//   return (dispatch) => {
+//     dispatch({type: CREATE_USER_START})
 
-    return axios.post('https://build-week-foodiefun.herokuapp.com/api/auth/register', {username, password})
-      .then((res) => {
-        localStorage.setItem('token', res.data.token)
-        dispatch({type: CREATE_USER_SUCCESS})
-      })
-      .catch((err) => {
-        const payload = err.response ? err.response.data : err
-        dispatch({type: CREATE_USER_FAILED, payload})
-      })
-  }
-}
+//     return axios.post('https://build-week-foodiefun.herokuapp.com/api/auth/register', {username, password})
+//       .then((res) => {
+//         localStorage.setItem('token', res.data.token)
+//         dispatch({type: CREATE_USER_SUCCESS})
+//       })
+//       .catch((err) => {
+//         const payload = err.response ? err.response.data : err
+//         dispatch({type: CREATE_USER_FAILED, payload})
+//       })
+//   }
+// }
 
-export function login(username, password) {
-  return (dispatch) => {
-    dispatch({type: LOGIN_START})
+// export function login(username, password) {
+//   return (dispatch) => {
+//     dispatch({type: LOGIN_START})
 
-    return axios.post('https://build-week-foodiefun.herokuapp.com/api/auth/login', {username, password})
-      .then((res) => {
-        localStorage.setItem('token', res.data.token)
-        dispatch({ type: LOGIN_SUCCESS })
-      })
-      .catch((err) => {
-        const payload = err.response ? err.response.data : err
-        dispatch({ type: LOGIN_FAILED, payload })
-      })
-  }
-}
+//     return axios.post('https://build-week-foodiefun.herokuapp.com/api/auth/login', {username, password})
+//       .then((res) => {
+//         localStorage.setItem('token', res.data.token)
+//         dispatch({ type: LOGIN_SUCCESS })
+//       })
+//       .catch((err) => {
+//         const payload = err.response ? err.response.data : err
+//         dispatch({ type: LOGIN_FAILED, payload })
+//       })
+//   }
+// }
 
-export function getAccount() {
-  return (dispatch) => {
-    dispatch({type: GET_ACCOUNT_START})
+// export function getAccount() {
+//   return (dispatch) => {
+//     dispatch({type: GET_ACCOUNT_START})
 
-    const headers = {
-      Authorization: localStorage.getItem('token'),
-    }
+//     const headers = {
+//       Authorization: localStorage.getItem('token'),
+//     }
 
-    axios.get('https://build-week-foodiefun.herokuapp.com/api/meals/', {headers})
-      .then((res) => {
-        dispatch({type: GET_ACCOUNT_SUCCESS, payload: res.data})
-      })
-      .catch((err) => {
-        console.log(err)
-        dispatch({type: GET_ACCOUNT_FAILED, payload: err.response.data})
-      })
-  }
-}
+//     axios.get('https://build-week-foodiefun.herokuapp.com/api/meals/', {headers})
+//       .then((res) => {
+//         dispatch({type: GET_ACCOUNT_SUCCESS, payload: res.data})
+//       })
+//       .catch((err) => {
+//         console.log(err)
+//         dispatch({type: GET_ACCOUNT_FAILED, payload: err.response.data})
+//       })
+//   }
+// }
 
-export function addMeal(payload) {
-  return (dispatch) => {
-    dispatch({type: ADD_MEAL_START})
+// export function addMeal(payload) {
+//   return (dispatch) => {
+//     dispatch({type: ADD_MEAL_START})
 
-    const headers = {
-      Authorization: localStorage.getItem('token'),
-    }
-    console.log(payload)
+//     const headers = {
+//       Authorization: localStorage.getItem('token'),
+//     }
+//     console.log(payload)
 
-    axios.post('https://build-week-foodiefun.herokuapp.com/api/meals', payload, { headers })
-      .then((res) => {
-        dispatch({type: ADD_MEAL_SUCCESS, payload: res.data})
-      })
-      .catch((err) => {
-        console.log(err)
-        dispatch({type: ADD_MEAL_FAILED, payload: err})
-      })
-  }
-}
+//     axios.post('https://build-week-foodiefun.herokuapp.com/api/meals', payload, { headers })
+//       .then((res) => {
+//         dispatch({type: ADD_MEAL_SUCCESS, payload: res.data})
+//       })
+//       .catch((err) => {
+//         console.log(err)
+//         dispatch({type: ADD_MEAL_FAILED, payload: err})
+//       })
+//   }
+// }
 
-export function getMeal(id) {
-  return (dispatch) => {
-    dispatch({ type: GET_MEAL_START })
+// export function getMeal(id) {
+//   return (dispatch) => {
+//     dispatch({ type: GET_MEAL_START })
 
-    const headers = {
-      Authorization: localStorage.getItem('token'),
-    }
+//     const headers = {
+//       Authorization: localStorage.getItem('token'),
+//     }
 
-    axios.get(`https://build-week-foodiefun.herokuapp.com/api/meals/${id}`, { headers })
-      .then((res) => {
-        dispatch({ type: GET_MEAL_SUCCESS, payload: res.data })
-      })
-      .catch((err) => {
-        console.log(err)
-        dispatch({ type: GET_MEAL_FAILED, payload: err.response.data })
-      })
-  }
-}
+//     axios.get(`https://build-week-foodiefun.herokuapp.com/api/meals/${id}`, { headers })
+//       .then((res) => {
+//         dispatch({ type: GET_MEAL_SUCCESS, payload: res.data })
+//       })
+//       .catch((err) => {
+//         console.log(err)
+//         dispatch({ type: GET_MEAL_FAILED, payload: err.response.data })
+//       })
+//   }
+// }
 
-export function updateMeal(payload, id) {
-  return (dispatch) => {
-    dispatch({ type: UPDATE_MEAL_START })
+// export function updateMeal(payload, id) {
+//   return (dispatch) => {
+//     dispatch({ type: UPDATE_MEAL_START })
 
-    const headers = {
-      Authorization: localStorage.getItem('token'),
-    }
-    console.log(payload)
-    axios.put(`https://build-week-foodiefun.herokuapp.com/api/meals/${id}`, payload, { headers })
-      .then((res) => {
-        dispatch({ type: UPDATE_MEAL_SUCCESS, payload: res.data })
-      })
-      .catch((err) => {
-        dispatch({ type: UPDATE_MEAL_FAILED, payload: err.response })
-      })
-  }
-}
+//     const headers = {
+//       Authorization: localStorage.getItem('token'),
+//     }
+//     console.log(payload)
+//     axios.put(`https://build-week-foodiefun.herokuapp.com/api/meals/${id}`, payload, { headers })
+//       .then((res) => {
+//         dispatch({ type: UPDATE_MEAL_SUCCESS, payload: res.data })
+//       })
+//       .catch((err) => {
+//         dispatch({ type: UPDATE_MEAL_FAILED, payload: err.response })
+//       })
+//   }
+// }
 
-export function deleteMeal(id) {
-  return (dispatch) => {
-    dispatch({ type: DELETE_MEAL_START })
+// export function deleteMeal(id) {
+//   return (dispatch) => {
+//     dispatch({ type: DELETE_MEAL_START })
 
-    const headers = {
-      Authorization: localStorage.getItem('token'),
-    }
+//     const headers = {
+//       Authorization: localStorage.getItem('token'),
+//     }
 
-    axios.delete(`https://build-week-foodiefun.herokuapp.com/api/meals/${id}`, { headers })
-      .then((res) => {
-        dispatch({ type: DELETE_MEAL_SUCCESS, payload: res.data })
-      })
-      .catch((err) => {
-        dispatch({ type: DELETE_MEAL_FAILED, payload: err.response })
-      })
-  }
-}
+//     axios.delete(`https://build-week-foodiefun.herokuapp.com/api/meals/${id}`, { headers })
+//       .then((res) => {
+//         dispatch({ type: DELETE_MEAL_SUCCESS, payload: res.data })
+//       })
+//       .catch((err) => {
+//         dispatch({ type: DELETE_MEAL_FAILED, payload: err.response })
+//       })
+//   }
+// }
 
-export function mealID(id) {
-  return {
-    type: MEAL_ID,
-    payload: id
-  }
-}
+// export function mealID(id) {
+//   return {
+//     type: MEAL_ID,
+//     payload: id
+//   }
+// }
 
