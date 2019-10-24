@@ -12,10 +12,7 @@ const SignIn = ({ errors, touched, values, status }) => {
   return (
     <div>
       <SignInH1>Sign In</SignInH1>
-      <div style={vectorStyle}>
-        <FbIcon />
-        <GoogleIcon />
-      </div>
+      
 
       <Form>
         <BtnDiv>

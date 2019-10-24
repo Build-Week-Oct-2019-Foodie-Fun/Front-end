@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Form, Field, withFormik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-import { FbIcon, GoogleIcon, vectorStyle } from "../vectors/Vectors";
 import { SignInBtn } from "../styles/Buttons";
 import { BtnDiv } from "../styles/Divs";
 import { SignInH1 } from "../styles/AppStyles";
@@ -12,14 +11,7 @@ const CreateAccount = ({ errors, touched, values, status }) => {
   return (
     <div>
       <SignInH1>Create Account</SignInH1>
-      <div style={vectorStyle}>
-        <Link to={"/createWithFb"}>
-          <FbIcon />
-        </Link>
-        <Link to={"/createWithGoogle"}>
-          <GoogleIcon />
-        </Link>
-      </div>
+      
       <Form >
         <BtnDiv >
           <br></br>
