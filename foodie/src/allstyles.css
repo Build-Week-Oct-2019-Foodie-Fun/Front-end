@@ -1,0 +1,367 @@
+
+  .App {
+    text-align: center;
+    width: 100%;
+    flex-flow: column wrap;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+  .App nav {
+    width: 100%;
+  }
+  
+  body {
+    background-image: url('https://cache-graphicslib.viator.com/graphicslib/page-images/742x525/750496_viator1.jpg');
+    background-size:100%;
+  }
+ 
+
+.pleaseAdd {
+    border-radius: 10px;
+    padding: 1rem;
+    background: white;
+    margin: 1rem;
+    color:yellowgreen;
+ 
+    
+  }
+   a{
+       text-decoration: none;
+  }
+ .pleaseAdd:hover{
+   color: red;
+ }
+
+  /* nav styles */
+   .navBar {
+    background: rgb(26, 21, 21);
+    opacity: .9;
+    height: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-flow:nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px white;
+    line-height: 1rem;
+  }
+  .navBar button {
+    border-radius: 5px;
+    padding: 4px 10px;
+    background-color:yellow;
+    color:black;
+    font-weight: bold;
+
+  }
+  .navBar button:hover{
+    background-color:yellowgreen;
+    cursor:pointer;
+  }
+  .navBar a {
+    color: white;
+    margin: 0 2rem 0 0;
+    text-decoration: none;
+  }
+  .navBar a:hover{
+    color:yellowgreen;
+  }
+  .navBarLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+  }
+  .foodieFun{
+    color:yellow;
+    font-size:3rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  }
+  input{
+ width:70%;
+ background-color: rgb(26, 21, 21);
+ padding:5px;
+ color:white;
+
+  }
+  form{
+    display:block;
+  }
+  .input{
+    width:50%;
+  }
+  .input button{
+    margin-left:5px;
+    font-weight: bold;
+
+  } 
+
+
+  /* end of nav styles */
+ 
+  
+/* .....   */
+
+.addMeal input{
+  background-color:white;
+  border-radius:10px;
+  padding:10px;
+  margin-top:10px;
+  border:2px solid rgb(39, 8, 8);
+  
+
+}
+.listRoute {
+  width: 20%;
+  align-self: flex-start;
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  right: 1px;
+  top: 56px;
+}
+.mealList {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+.mealList a {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.mealCard {
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  opacity: .95;
+  margin: 1rem 0 1rem .15rem;
+  width: 100%;
+  background-color:rgb(10, 7, 7);
+}
+.restName{
+  color:red;
+  font-weight: bolder;
+}
+.mealCardImg {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.appRoutes {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 99.75%;
+}
+
+.mealCardTwo {
+  width: 70%;
+
+}
+
+.itemImg {
+  margin: .5rem .5rem .5rem .5rem;
+  width: 50%;
+  height: 45%;
+  border-radius: 10px;
+}
+.itemName {
+  margin: .5rem;
+}
+.rating {
+  margin: .5rem;
+}
+
+.mealCardTop {
+  border-bottom: solid 2px white;
+  width: 100%;
+}
+.mealCardBottom {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.filters {
+  display: flex;
+  justify-content: flex-start;
+  width: 70%;
+  margin-top: 1rem;
+}
+.filters label {
+  margin: 0 .5rem;
+}
+
+.addMeal {
+  border-radius: 10px;
+  padding: 2%;
+  margin-top: 5%;
+  background: rgb(26, 21, 21);
+  opacity: .9;
+}
+.updateMeal {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  width: 96%;
+  position: relative;
+  left: -.32rem;
+  top: .3rem;
+}
+.addButton{
+  color:black;
+  background-color:yellow;
+  border-radius: 5px;
+    padding: 10px 25px;
+    margin-top:10px;
+    font-weight: bold;
+}
+.addButton:hover{
+  color:black;
+  background-color:yellowgreen;
+  
+}
+
+.home{
+  /* background-color:black; */
+  width:60%;
+  padding:10px;
+}
+.mealCard2{
+  /* background: rgb(26, 21, 21); */
+  border-radius:20px;
+
+ width:100%;
+}
+.mealRow{
+  /* background-color:lightgray; */
+  background-color:white;
+
+  width:50%;
+  margin:0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  border:4px solid black;
+  height:30vh;
+  border-radius:30px;
+  padding:10px;
+
+}
+
+.tableContainer{
+  border:none;
+}
+.here{
+  /* border:2px solid purple; */
+  width:50%;
+  background-color:rgb(150, 150, 150);
+  border-radius:30px;
+}
+.here p{
+  color:white;
+  font-weight:bold;
+}
+.deleteButton{
+    color:black;
+    background-color:yellow;
+    border-radius: 5px;
+      padding: 10px 25px;
+      margin-top:10px;
+      font-weight: bold;
+      margin-left:6px;
+  }
+  .deleteButton:hover{
+    color:black;
+    background-color:yellowgreen;
+    
+  }
+#mealNav{
+  background-color:yellow;
+  width:100px;
+  padding:9px;
+  color:black;
+  border-radius:10px
+}
+#mealNav:hover{
+  background-color:yellowgreen;
+
+}
+.register h1{
+   /* url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"); */
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffdd67;
+  font-weight: bold;
+  font-size: 6.8rem;
+}
+.P{
+  font-size: 1.6rem;
+  color: white;
+  width:60%;
+  margin:0 auto;
+}
+.register form{
+  width:35%;
+  margin:0 auto;
+  margin-top:17px;
+}
+.register form input{
+  margin-top:5px;
+  background-color:white;
+  color:black;
+}
+.register{
+  background-color: #282c34;
+  text-align: center;
+  min-height: 100vh;
+  width:100%;
+}
+.registerButton{
+  background-color: #ffdd67;
+  border-radius: 5px;
+      padding: 10px 25px;
+      width:35%;
+      margin-top:10px;
+      font-weight: bold;
+      margin-left:6px;
+}
+
+.registerButton:hover{
+  background-color:yellowgreen;
+
+}
+.register a{
+  color: #ffdd67;
+}
