@@ -1,3 +1,13 @@
+nav{
+    display:flex;
+    justify-content:space-evenly;
+    
+}
+nav a{
+    text-decoration:none;
+    color: @white;
+    font-size: 20px;
+}
 #mainAbout {
     .aboutStuff {
         h1 {
@@ -36,14 +46,17 @@
             height: auto;
             max-width:500px;
             .custom-layout(center, center);
+            
         }
     
         .teamwork-list{
             display: flex;
             flex-direction: column;
-        }
+            justify-content:center;
+          
         
             h4 {
+                
                 width: 100%;
                 padding: 10px;
                 margin: 10px;
@@ -51,8 +64,8 @@
                 font-size: 25px;
                 text-decoration: underline;
                 color: @white;
-                @media @mobile{
-                    .custom-layout(center, center);
+               @media @mobile{
+                   .custom-layout(center, center);
                 }
              a{
                  padding: 1rem;
@@ -61,6 +74,7 @@
                
               }
             }
+        }
     }
     footer{
         color:@white;

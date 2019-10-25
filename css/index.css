@@ -149,7 +149,7 @@ h1 {
 }
 h3,
 h4 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 header {
   width: 100%;
@@ -183,6 +183,7 @@ header {
   }
 }
 .pimg .pic {
+  border-radius: 25px;
   margin-top: 13px;
   min-width: 400px;
   width: 30%;
@@ -219,6 +220,10 @@ header {
   margin-bottom: 20px;
   border: 2px solid #FFDD67;
 }
+#signCreate a {
+  text-decoration: none;
+  color: #FFFDF5;
+}
 #signCreate .createAcct {
   width: 50%;
   background-color: #313036;
@@ -248,6 +253,15 @@ footer {
 }
 footer p {
   font-size: 1.5rem;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+nav a {
+  text-decoration: none;
+  color: #FFFDF5;
+  font-size: 20px;
 }
 #mainAbout .aboutStuff h1 {
   width: 100%;
@@ -289,8 +303,9 @@ footer p {
 #mainAbout .teamwork .teamwork-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-#mainAbout .teamwork h4 {
+#mainAbout .teamwork .teamwork-list h4 {
   width: 100%;
   padding: 10px;
   margin: 10px;
@@ -302,13 +317,13 @@ footer p {
   color: #FFFDF5;
 }
 @media (max-width: 500px) {
-  #mainAbout .teamwork h4 {
+  #mainAbout .teamwork .teamwork-list h4 {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-#mainAbout .teamwork h4 a {
+#mainAbout .teamwork .teamwork-list h4 a {
   padding: 1rem;
   text-decoration: underline;
   color: #FFFDF5;
